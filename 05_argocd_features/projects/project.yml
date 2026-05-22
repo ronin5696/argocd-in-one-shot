@@ -6,7 +6,7 @@ metadata:
 spec:
   description: Project for frontend team apps   # Optional description
   sourceRepos:                 # Which Git repos are allowed for this Project
-    - https://github.com/<your-username>/argocd-demos.git
+    - https://github.com/ronin5696/argocd-demos.git
   destinations:                # Which clusters/namespaces apps in this Project can target
     - namespace: frontend
       server: https://172.31.42.197:33893  # Target cluster server url
@@ -15,8 +15,8 @@ spec:
     - group: "*"               # Here also allowing everything
       kind: "*"
   roles:                       # Define roles for RBAC within this Project
-    - name: frontend-admins    # Role name  
+    - name: frontend-admins    # Role name
       description: Admins for frontend team
       policies:                # Policies associated with this role
-        # syntax: - p, proj:<project-name>:<role-name>, applications, <action>, <project>/<app-name>, permission(allow|deny)
-        - p, proj:frontend-team:frontend-admins, applications, *, frontend-team/*, allow  # Full access to all apps in this Project, Here p = policy, proj = project, applications = resource, * = action (all actions), frontend-team/* = resource name pattern, allow = effect (allow or deny)
+        # syntax: - p, proj:<project-name>:<role-name>, applications, <action>, <project>/<app-name>, permission(allow|>
+        - p, proj:frontend-team:frontend-admins, applications, *, frontend-team/*, allow  # Full access to all apps in >
