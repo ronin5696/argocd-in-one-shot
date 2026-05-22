@@ -10,9 +10,7 @@ spec:
   destinations:                # Which clusters/namespaces apps in this Project can target
     - namespace: frontend
       server: https://172.31.42.197:33893  # Target cluster server url
-  clusterResourceWhitelist:    # Which cluster-wide resources are allowed (e.g., CRDs)
-    - group: "*"               # '*' means allow all groups
-      kind: "*"                # '*' means allow all kinds
+  clusterResourceWhitelist: []
   namespaceResourceWhitelist:  # Which namespace-level resources are allowed
     - group: "*"               # Here also allowing everything
       kind: "*"
